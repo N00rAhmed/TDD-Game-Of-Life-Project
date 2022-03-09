@@ -1,14 +1,20 @@
-function verifyPass(password){
-    if(password === null){
-        return false
-    }
-    if (password.length<9){
-        return false;
-    }else if(password.toUpperCase() === password){
-        return false;
-    }
-    else{
-        return true;
-    }
+function cellStatus(liveCell, noOfNeighbouringCells){
+    // if (liveCell === true && noOfNeighbouringCells < 2) {
+    //     return false;
+    // } else {
+    //     return true;
+    // }
+    // if (liveCell === true && noOfNeighbouringCells > 3) {
+    //     return false;
+    // } else if (liveCell === true && noOfNeighbouringCells < 3){
+    //     return false;
+    // }
+    // else {
+    //     return true;
+    // }    
+
+    return liveCell===true?noOfNeighbouringCells===2||noOfNeighbouringCells===3?true:false:noOfNeighbouringCells===3?true:false;
 }
-export{verifyPass}
+export{cellStatus}
+
+
